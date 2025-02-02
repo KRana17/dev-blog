@@ -21,8 +21,6 @@ jobs:
           whoami
           ls -l gradlew
           file gradlew
-      - name: Convert gradlew to Unix format (if needed)
-        run: dos2unix gradlew
       - name: Grant execute permission for gradlew
         run:  chmod +x ./gradlew
       - name: Build with Gradle
