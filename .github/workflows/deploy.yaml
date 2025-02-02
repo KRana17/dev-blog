@@ -17,8 +17,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
+      - name: name: Grant execute permission for gradlew
+        run:  run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: ./gradlew :blog-java:bake
+        run: ./gradlew :blog-java:bake    
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
