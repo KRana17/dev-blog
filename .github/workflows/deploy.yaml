@@ -16,9 +16,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          
-      - name: name: Grant execute permission for gradlew
-        run:  run: chmod +x ./gradlew
+      - name: Debug File Permissions
+        run: |
+          whoami
+          ls -l gradlew
+          file gradlew
+      - name: Convert gradlew to Unix format (if needed)
+        run: dos2unix gradlew
+      - name: Grant execute permission for gradlew
+        run:  chmod +x ./gradlew
       - name: Build with Gradle
         run: ./gradlew :blog-java:bake    
         
