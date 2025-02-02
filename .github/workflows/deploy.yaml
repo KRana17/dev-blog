@@ -23,9 +23,12 @@ jobs:
           file gradlew
       - name: Grant execute permission for gradlew
         run:  chmod +x ./gradlew
-      - name: Build with Gradle
-        run: ./gradlew :blog-java:bake    
-        
+      - name: Build with Gradle 
+        run: ./gradlew :blog-java:bake
+      - name: Check out gh-pages branch (if not already checked out)
+        run: |
+            git fetch origin gh-pages:gh-pages
+            git checkout gh-pages
       - name: Deploy to gh-pages
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
