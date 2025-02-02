@@ -1,0 +1,15 @@
+plugins {
+    id 'org.jbake.site'
+    id 'java'
+}
+
+jbake {
+    srcDirName = 'src/main/jbake'
+    destDirName = "build/jbake/${project.name}"
+    configuration['site.host'] = 'https://yourusername.github.io/dev-blogs'
+    configuration['site.title'] = 'Java Development Blog'
+    configuration['render.tags'] = true
+    configuration['render.sitemap'] = true
+    configuration['template.post.file'] = 'post.ftl'
+    configuration['template.archive.file'] = 'archive.ftl'
+}

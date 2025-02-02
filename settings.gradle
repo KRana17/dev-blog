@@ -1,0 +1,3 @@
+rootProject.name = 'dev-blogs'
+include 'shared'
+include 'blog-java'
