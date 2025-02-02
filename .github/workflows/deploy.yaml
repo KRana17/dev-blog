@@ -23,8 +23,13 @@ jobs:
           file gradlew
       - name: Grant execute permission for gradlew
         run:  chmod +x ./gradlew
-      - name: Build with Gradle 
+      - name: Build with Gradle
         run: ./gradlew :blog-java:bake
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+            folder: blog-java/build/jbake    # The folder the action should deploy
+            branch: gh-pages
       - name: Check out gh-pages branch (if not already checked out)
         run: |
             git fetch origin gh-pages:gh-pages
