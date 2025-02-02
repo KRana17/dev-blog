@@ -17,7 +17,7 @@ configure(subprojects.findAll { it.name != 'shared' }) {
     jbake {
         srcDirName = 'src/main/jbake'
         destDirName = "build/jbake/${project.name}"
-        configuration['site.host'] = 'https://krana17.github.io/JavaBlog'
+        configuration['site.host'] = 'https://krana17.github.io/dev-blog'
         configuration['render.tags'] = true
         configuration['render.sitemap'] = true
     }
