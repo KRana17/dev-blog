@@ -25,15 +25,14 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew :blog-java:bake
 
-      - name: Create or Checkout gh-pages Branch
-        run: |
-          git fetch origin gh-pages || true
-          git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
-          git reset --hard
-
-      - name: Deploy to gh-pages
+            - name: Deploy to gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git add .
+          git commit -m "Automated deployment to GitHub Pages" || echo "No changes to commit"
           git push -u origin gh-pages --force
+
