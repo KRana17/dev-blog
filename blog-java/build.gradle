@@ -1,0 +1,12 @@
+plugins {
+    id 'org.jbake.site' version '5.5.0'
+}
+
+jbake {
+    srcDirName = 'src/main/jbake'
+    destDirName = 'build/jbake'
+    configuration['site.host'] = 'https://krana17.github.io/JavaBlog'
+    configuration['site.title'] = 'Java Development Blog'
+    configuration['render.tags'] = true
+    configuration['render.sitemap'] = true
+}

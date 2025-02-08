@@ -1,0 +1,24 @@
+plugins {
+    id 'org.jbake.site' version '5.5.0' apply false
+}
+
+allprojects {
+    group = 'com.github.krana17'
+    version = '1.0.0'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+configure(subprojects.findAll { it.name != 'shared' }) {
+    apply plugin: 'org.jbake.site'
+
+    jbake {
+        srcDirName = 'src/main/jbake'
+        destDirName = "build/jbake/${project.name}"
+        configuration['site.host'] = 'https://krana17.github.io/dev-blog'
+        configuration['render.tags'] = true
+        configuration['render.sitemap'] = true
+    }
+}

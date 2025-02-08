@@ -1,0 +1,41 @@
+# Gradle
+.gradle
+**/build/
+!src/**/build/
+
+# Gradle wrapper files - DON'T ignore these
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# JBake output
+jbake.properties.local
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# IDE - Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+# IDE - VS Code
+.vscode/
+
+# Java
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# OS specific
+.DS_Store
+Thumbs.db

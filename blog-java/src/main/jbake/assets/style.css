@@ -1,0 +1,108 @@
+/* Modern blog styling */
+:root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --nav-bg: #f8fafc;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    background: var(--bg-color);
+}
+
+.navbar {
+    background: var(--nav-bg);
+    padding: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navbar-menu {
+    margin-top: 1rem;
+}
+
+.navbar-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.post-summary {
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.post-meta {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    margin: 2rem 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background: var(--nav-bg);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+code {
+    background: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+}
+
+pre code {
+    display: block;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.tags {
+    margin: 1rem 0;
+}
+
+.tag {
+    background: #e5e7eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
